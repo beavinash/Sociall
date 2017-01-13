@@ -14,6 +14,11 @@
 		E117B6FF1E28AD140012A25C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E117B6FE1E28AD140012A25C /* Assets.xcassets */; };
 		E117B7021E28AD140012A25C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E117B7001E28AD140012A25C /* LaunchScreen.storyboard */; };
 		E117B70A1E28AD4C0012A25C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E117B7091E28AD4C0012A25C /* GoogleService-Info.plist */; };
+		E1401BD81E2953F800EC9467 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BD71E2953F800EC9467 /* CustomView.swift */; };
+		E1401BDA1E29562200EC9467 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BD91E29562200EC9467 /* Constants.swift */; };
+		E1401BDD1E295C7200EC9467 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BDC1E295C7200EC9467 /* CustomButton.swift */; };
+		E1401BDF1E295E1F00EC9467 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BDE1E295E1F00EC9467 /* CustomTextField.swift */; };
+		E1401BE11E2969E000EC9467 /* CustomFancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BE01E2969E000EC9467 /* CustomFancyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		E117B7011E28AD140012A25C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E117B7031E28AD140012A25C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E117B7091E28AD4C0012A25C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E1401BD71E2953F800EC9467 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		E1401BD91E29562200EC9467 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E1401BDC1E295C7200EC9467 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E1401BDE1E295E1F00EC9467 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		E1401BE01E2969E000EC9467 /* CustomFancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFancyButton.swift; sourceTree = "<group>"; };
 		E1AC1E96855E3256EC7872B9 /* Pods_DevsSociall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevsSociall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +90,7 @@
 		E117B6F61E28AD140012A25C /* DevsSociall */ = {
 			isa = PBXGroup;
 			children = (
+				E1401BDB1E29568700EC9467 /* Utilities */,
 				E117B70B1E28B0BD0012A25C /* Model */,
 				E117B70C1E28B0C90012A25C /* Controller */,
 				E117B70D1E28B0D30012A25C /* View */,
@@ -111,8 +122,20 @@
 		E117B70D1E28B0D30012A25C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E1401BD71E2953F800EC9467 /* CustomView.swift */,
+				E1401BDC1E295C7200EC9467 /* CustomButton.swift */,
+				E1401BDE1E295E1F00EC9467 /* CustomTextField.swift */,
+				E1401BE01E2969E000EC9467 /* CustomFancyButton.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		E1401BDB1E29568700EC9467 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E1401BD91E29562200EC9467 /* Constants.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1401BD81E2953F800EC9467 /* CustomView.swift in Sources */,
 				E117B6FA1E28AD140012A25C /* SignInVC.swift in Sources */,
+				E1401BDF1E295E1F00EC9467 /* CustomTextField.swift in Sources */,
 				E117B6F81E28AD140012A25C /* AppDelegate.swift in Sources */,
+				E1401BDA1E29562200EC9467 /* Constants.swift in Sources */,
+				E1401BDD1E295C7200EC9467 /* CustomButton.swift in Sources */,
+				E1401BE11E2969E000EC9467 /* CustomFancyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
