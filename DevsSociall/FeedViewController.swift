@@ -2,7 +2,7 @@
 //  FeedViewController.swift
 //  DevsSociall
 //
-//  Created by Avinash Reddy on 1/13/17.
+//  Created by Avinash Reddy on 1/14/17.
 //  Copyright © 2017 theEine. All rights reserved.
 //
 
@@ -22,7 +22,7 @@ class FeedViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+        
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("Avinash Success: \(keychainResult)")
