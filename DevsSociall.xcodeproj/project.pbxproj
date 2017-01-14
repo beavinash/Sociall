@@ -37,6 +37,7 @@
 		E1401BDC1E295C7200EC9467 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E1401BDE1E295E1F00EC9467 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E1401BE01E2969E000EC9467 /* CustomFancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFancyButton.swift; sourceTree = "<group>"; };
+		E1401BE21E29A4F800EC9467 /* DevsSociall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevsSociall.entitlements; sourceTree = "<group>"; };
 		E1AC1E96855E3256EC7872B9 /* Pods_DevsSociall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevsSociall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -90,6 +91,7 @@
 		E117B6F61E28AD140012A25C /* DevsSociall */ = {
 			isa = PBXGroup;
 			children = (
+				E1401BE21E29A4F800EC9467 /* DevsSociall.entitlements */,
 				E1401BDB1E29568700EC9467 /* Utilities */,
 				E117B70B1E28B0BD0012A25C /* Model */,
 				E117B70C1E28B0C90012A25C /* Controller */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = DYK92P2HLR;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -391,6 +398,7 @@
 			baseConfigurationReference = 75502A43AF23C765D2C61F37 /* Pods-DevsSociall.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DevsSociall/DevsSociall.entitlements;
 				DEVELOPMENT_TEAM = DYK92P2HLR;
 				INFOPLIST_FILE = DevsSociall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -405,6 +413,7 @@
 			baseConfigurationReference = C986EEFD7B14AD93F6E00AA2 /* Pods-DevsSociall.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DevsSociall/DevsSociall.entitlements;
 				DEVELOPMENT_TEAM = DYK92P2HLR;
 				INFOPLIST_FILE = DevsSociall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
