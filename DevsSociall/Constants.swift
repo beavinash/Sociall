@@ -12,3 +12,7 @@ import UIKit
 let SHADOW_GRAY: CGFloat = 120.0 / 255.0
 
 let KEY_UID = "uid"
+
+let Segue_Main_view = "showMainView"
+
+let Segue_Auth_view = "showAuthView"

@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
 
@@ -19,6 +20,15 @@ class SignInVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        // Check for keychain key
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID) {
+            performSegue(withIdentifier: Segue_Main_view, sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,6 +61,11 @@ class SignInVC: UIViewController {
                 print("Avinash Error: Unable to authenticate with Firebase \(error?.localizedDescription)")
             } else {
                 print("Avinash Success: Succesfully authenticated with Firebase")
+                
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
+                
             }
         }
     }
@@ -62,6 +77,9 @@ class SignInVC: UIViewController {
                 FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                     if error == nil {
                         print("Avinash Success: Successfully Authenticated")
+                        if let user = user {
+                            self.completeSignIn(id: user.uid)
+                        }
                         
                     } else {
                         FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
@@ -69,12 +87,22 @@ class SignInVC: UIViewController {
                                 print("Avinash Error: Unable to authenticate with Firebase \(error?.localizedDescription)")
                             } else {
                                 print("Avinash Success: Succesfully Authentitcated")
+                                if let user = user {
+                                    self.completeSignIn(id: user.uid)
+                                }
                             }
                         })
                     }
                 })
             }
         }
+    }
+    
+    // Kechchain - here id is user.uid
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
+        print("Avinash Success: Data saved to Keychain \(keychainResult)")
+        performSegue(withIdentifier: Segue_Main_view, sender: nil)
     }
 
 }

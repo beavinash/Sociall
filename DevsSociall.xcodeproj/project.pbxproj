@@ -19,6 +19,7 @@
 		E1401BDD1E295C7200EC9467 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BDC1E295C7200EC9467 /* CustomButton.swift */; };
 		E1401BDF1E295E1F00EC9467 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BDE1E295E1F00EC9467 /* CustomTextField.swift */; };
 		E1401BE11E2969E000EC9467 /* CustomFancyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BE01E2969E000EC9467 /* CustomFancyButton.swift */; };
+		E1401BE41E29E41400EC9467 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BE31E29E41400EC9467 /* FeedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E1401BDE1E295E1F00EC9467 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E1401BE01E2969E000EC9467 /* CustomFancyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomFancyButton.swift; sourceTree = "<group>"; };
 		E1401BE21E29A4F800EC9467 /* DevsSociall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DevsSociall.entitlements; sourceTree = "<group>"; };
+		E1401BE31E29E41400EC9467 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		E1AC1E96855E3256EC7872B9 /* Pods_DevsSociall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevsSociall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E117B6F91E28AD140012A25C /* SignInVC.swift */,
+				E1401BE31E29E41400EC9467 /* FeedViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				E117B6F81E28AD140012A25C /* AppDelegate.swift in Sources */,
 				E1401BDA1E29562200EC9467 /* Constants.swift in Sources */,
 				E1401BDD1E295C7200EC9467 /* CustomButton.swift in Sources */,
+				E1401BE41E29E41400EC9467 /* FeedViewController.swift in Sources */,
 				E1401BE11E2969E000EC9467 /* CustomFancyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
