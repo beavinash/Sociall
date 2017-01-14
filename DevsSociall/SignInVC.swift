@@ -13,6 +13,9 @@ import Firebase
 
 class SignInVC: UIViewController {
 
+    @IBOutlet weak var emailTextField: CustomTextField!
+    @IBOutlet weak var passwordTextField: CustomTextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -52,6 +55,27 @@ class SignInVC: UIViewController {
         }
     }
     
+    @IBAction func signInButtonTapped(_ sender: Any) {
+        
+        if let email = emailTextField.text {
+            if let pwd = passwordTextField.text {
+                FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
+                    if error == nil {
+                        print("Avinash Success: Successfully Authenticated")
+                        
+                    } else {
+                        FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
+                            if error != nil {
+                                print("Avinash Error: Unable to authenticate with Firebase \(error?.localizedDescription)")
+                            } else {
+                                print("Avinash Success: Succesfully Authentitcated")
+                            }
+                        })
+                    }
+                })
+            }
+        }
+    }
 
 }
 
