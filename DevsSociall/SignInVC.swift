@@ -63,7 +63,8 @@ class SignInVC: UIViewController {
                 print("Avinash Success: Succesfully authenticated with Firebase")
                 
                 if let user = user {
-                    self.completeSignIn(id: user.uid)
+                    let userData = ["provider": credential.provider]
+                    self.completeSignIn(id: user.uid, userData: userData)
                 }
                 
             }
@@ -78,7 +79,8 @@ class SignInVC: UIViewController {
                     if error == nil {
                         print("Avinash Success: Successfully Authenticated")
                         if let user = user {
-                            self.completeSignIn(id: user.uid)
+                            let userData = ["provider": user.providerID]
+                            self.completeSignIn(id: user.uid, userData: userData)
                         }
                         
                     } else {
@@ -88,7 +90,8 @@ class SignInVC: UIViewController {
                             } else {
                                 print("Avinash Success: Succesfully Authentitcated")
                                 if let user = user {
-                                    self.completeSignIn(id: user.uid)
+                                    let userData = ["provider": user.providerID]
+                                    self.completeSignIn(id: user.uid, userData: userData)
                                 }
                             }
                         })
@@ -99,7 +102,10 @@ class SignInVC: UIViewController {
     }
     
     // Kechchain - here id is user.uid
-    func completeSignIn(id: String) {
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        
         let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID)
         print("Avinash Success: Data saved to Keychain \(keychainResult)")
         performSegue(withIdentifier: Segue_Main_view, sender: nil)
