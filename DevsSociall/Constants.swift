@@ -16,3 +16,5 @@ let KEY_UID = "uid"
 let Segue_Main_view = "showMainView"
 
 let Segue_Auth_view = "showAuthView"
+
+let Cell_Identifier_Feed = "PostCell"
