@@ -23,6 +23,7 @@
 		E1401BE81E2A72B400EC9467 /* CustomCircleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BE71E2A72B400EC9467 /* CustomCircleImageView.swift */; };
 		E1401BEA1E2AF59D00EC9467 /* PostTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BE91E2AF59D00EC9467 /* PostTVC.swift */; };
 		E1401BED1E2BE62800EC9467 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BEC1E2BE62800EC9467 /* DataService.swift */; };
+		E1401BEF1E2C6F4E00EC9467 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1401BEE1E2C6F4E00EC9467 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E1401BE71E2A72B400EC9467 /* CustomCircleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleImageView.swift; sourceTree = "<group>"; };
 		E1401BE91E2AF59D00EC9467 /* PostTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTVC.swift; sourceTree = "<group>"; };
 		E1401BEC1E2BE62800EC9467 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		E1401BEE1E2C6F4E00EC9467 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E1AC1E96855E3256EC7872B9 /* Pods_DevsSociall.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevsSociall.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		E117B70B1E28B0BD0012A25C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E1401BEE1E2C6F4E00EC9467 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				E1401BD81E2953F800EC9467 /* CustomView.swift in Sources */,
 				E117B6FA1E28AD140012A25C /* SignInVC.swift in Sources */,
 				E1401BDF1E295E1F00EC9467 /* CustomTextField.swift in Sources */,
+				E1401BEF1E2C6F4E00EC9467 /* Post.swift in Sources */,
 				E1401BEA1E2AF59D00EC9467 /* PostTVC.swift in Sources */,
 				E1401BE81E2A72B400EC9467 /* CustomCircleImageView.swift in Sources */,
 				E1401BED1E2BE62800EC9467 /* DataService.swift in Sources */,
