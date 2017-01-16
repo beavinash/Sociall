@@ -16,6 +16,8 @@ class PostTVC: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var likesLabel: UILabel!
     
+    var post: Post!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +27,12 @@ class PostTVC: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configureCell(post: Post) {
+        self.post = post
+        self.caption.text = post.caption
+        self.likesLabel.text = "\(post.likes)"
     }
 
 }
