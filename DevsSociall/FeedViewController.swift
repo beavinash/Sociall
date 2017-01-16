@@ -21,6 +21,12 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // Getting data
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            print("Avinash Success: ")
+            print(snapshot.value!)
+        })
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
