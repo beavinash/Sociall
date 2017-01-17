@@ -10,11 +10,15 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var addImage: CustomCircleImageView!
+    
     var posts = [Post]()
+    
+    var imagePicker: UIImagePickerController!
     
 
     override func viewDidLoad() {
@@ -23,6 +27,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+        
+        // image picker
+        imagePicker = UIImagePickerController()
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
         
         // Getting data
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
@@ -61,6 +70,20 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             return PostTVC()
         }
+    }
+    
+    @IBAction func addImageTapped(_ sender: Any) {
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage {
+            addImage.image = image
+        } else {
+            print("A valid image was not selected")
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

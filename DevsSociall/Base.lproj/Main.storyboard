@@ -167,13 +167,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DZC-xd-bsm" userLabel="Post Stack View">
                                         <rect key="frame" x="8" y="8" width="327" height="74"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="kuN-Mn-LP2" customClass="CustomCircleImageView" customModule="DevsSociall" customModuleProvider="target">
+                                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="kuN-Mn-LP2" customClass="CustomCircleImageView" customModule="DevsSociall" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="12" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.70588235290000001" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="VKD-8p-Ov6"/>
                                                     <constraint firstAttribute="height" constant="50" id="pLg-Xr-GTY"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ZC0-p1-62m" appends="YES" id="f6g-Pj-CHt"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RAF-8S-Y0m" customClass="CustomTextField" customModule="DevsSociall" customModuleProvider="target">
                                                 <rect key="frame" x="60" y="19.5" width="207" height="35"/>
@@ -324,14 +328,20 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addImage" destination="kuN-Mn-LP2" id="1gf-kd-GZ6"/>
                         <outlet property="tableView" destination="un7-cM-sBB" id="zbm-pT-PUA"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showAuthView" id="33w-Vr-Guh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qLJ-th-TwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="S59-xb-kZY">
+                <tapGestureRecognizer id="S59-xb-kZY" userLabel="Sign Out Gesture Recognizer">
                     <connections>
                         <action selector="signOutTapped:" destination="xhS-3S-njG" id="e11-e3-kD7"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="ZC0-p1-62m" userLabel="Image Picker Gesture Recognizer">
+                    <connections>
+                        <action selector="addImageTapped:" destination="xhS-3S-njG" id="pzX-a8-Xzx"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
